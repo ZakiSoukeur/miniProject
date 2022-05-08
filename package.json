@@ -1,0 +1,21 @@
+{
+  "name": "miniprojet",
+  "version": "1.0.0",
+  "description": "this project for AAW module",
+  "main": "index.js",
+  "scripts": {
+    "startDev": "nodemon index.js"
+  },
+  "author": "costa & sugar",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.9",
+    "mongoose-slug-generator": "^1.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
