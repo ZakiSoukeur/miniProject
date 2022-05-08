@@ -2,16 +2,24 @@ const express = require('express')
 const Reclamation = require('../models/Reclamation')
 // const Note = require('../models/Note')
 const User = require('../models/User')
-
+const xlsx = require('xlsx')
 const router = express.Router()
 
 
-
+const parse = (fname) => {
+    const excelData = xlsx.readFile(fname)
+    return Object.keys(excelData.Sheets).map((name) => ({
+        name,
+        data: xlsx.utils.sheet_to_json(excelData.Sheets[name]),
+    }))
+}
 
 router.get('/:responsibleSlug', async (req, res) => {
 
     let users = await User.find({ userType: 'student' })
-
+    parse('./pvtest.xlsx').forEach(e => {
+        console.log(e.data)
+    })
     res.send('responsible page ' + users)
 })
 router.get('/:responsibleSlug/reclamation', async (req, res) => {

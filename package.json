@@ -10,10 +10,11 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.0",
-    "ejs": "^3.1.6",
+    "ejs": "^3.1.7",
     "express": "^4.17.3",
     "mongoose": "^6.2.9",
-    "mongoose-slug-generator": "^1.0.4"
+    "mongoose-slug-generator": "^1.0.4",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
